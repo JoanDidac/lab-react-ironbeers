@@ -27,8 +27,8 @@ const SingleBeer = () => {
 
   return (
     <>
-      <div id="single-beer-container"> 
-        <Header />
+    <div>
+      <div id="beer-detail-container"> 
         <img src={beer.image_url} alt={beer.name} />
         <div>
           <h1>{beer.name}</h1>
@@ -37,8 +37,11 @@ const SingleBeer = () => {
            <p>Attenuation level: {beer.attenuation_level} </p>
            <p>{beer.description} </p>
            <p>Created by: {beer.contributed_by} </p>
+           <Link to="/beers" className="back-link">Back to All Beers</Link>
           </div>
-        <Link to="/beers" className="back-link">Back to All Beers</Link>
+        
+      </div>
+    
       </div>
     
     </>

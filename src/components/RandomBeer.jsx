@@ -27,10 +27,10 @@ const RandomBeer = () => {
 
   return (
     <div className="single-beer-container"> 
-      <Header />
+      {/* <Header /> */}
       <img src={beer.image_url} alt={beer.name} />
       <div>
-         <h1>{beer.name}</h1>
+         <h1 className='form-title'>{beer.name}</h1>
          <h2>{beer.tagline}</h2>
             <p>First brewed: {beer.first_brewed}</p>
             <p>Attenuation level: {beer.attenuation_level}</p>

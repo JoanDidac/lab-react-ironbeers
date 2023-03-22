@@ -246,7 +246,7 @@ button:hover {
   
 }
 /* Single Beer Page */
-#single-beer-container {
+.single-beer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,7 +256,7 @@ button:hover {
   margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
+  padding: 120px;
   background-color: #FFFFFF;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.362);
@@ -264,16 +264,57 @@ button:hover {
 }
 
 
-#single-beer-container img {
-  width: 300px;
-  height: auto;
+.single-beer-container img {
+  max-width: 150px;
+  max-height: 550px;
   border-radius: 3px;
 }
 
-#single-beer-container h1,
-#single-beer-container h2 {
+.single-beer-container h1,
+.single-beer-container h2 {
+  margin-top: 10px;
+  
+}
+
+#beer-detail-container {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:200px 100px;
+
+}
+#beer-detail-container img {
+  max-width: 110px;
+}
+
+#beer-detail-container p {
+  color:#1c1b1b;
+  max-width: 420px;
+}
+#beer-detail-container {
+  display: flex;
+  margin: 20px;
+}
+
+#beer-detail-container img {
+  width: 200px;
+  height: auto;
+  margin-right: 120px;
+}
+
+#beer-detail-container div {
+  flex: 1;
+  order: 1;
+}
+
+#beer-detail-container h1 {
+  margin-top: 0;
+}
+
+#beer-detail-container p {
   margin-top: 10px;
 }
+
 
 /* Back link */
 .back-link {
