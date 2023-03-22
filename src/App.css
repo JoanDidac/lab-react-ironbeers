@@ -1,38 +1,353 @@
-.App {
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #E5E5E5;
+  color: #14213D;
+  margin: 0;
+  padding: 0;
+}
+
+/* Home Page */
+.home-container {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-container h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
+  letter-spacing: 10px;
+  font-size: 14rem;
+  background-image: url('https://www.shbarcelona.com/blog/en/wp-content/uploads/2016/02/First-beer-photo-e1455748858975-810x564.jpg');
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 1;
+  text-shadow:
+    4px 4px 0 rgba(0, 0, 0, 0.1),
+    -4px -4px 0 rgba(0, 0, 0, 0.1),
+    4px -4px 0 rgba(0, 0, 0, 0.1),
+    -4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.home-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-links li a {
+  color: #14213D;
+  text-decoration: none;
+}
+
+.home-links li a:hover {
+  color: #FCA311;
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #14213D;
+  background-image: radial-gradient(#f28e1c 10%, #f28e1c 20%, #f28e1c 30%, #f28e1c 40%, #f28e1c 50%, #e9840f 60%);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Nav icon */
+.navbar .nav-icon {
+  display: inline-block;
+  width: 119px;
+  height: 99px;
+  background-image: url('/src/assets/Beer-icon.png');
+  background-size: cover;
+  background-position: center;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li .nav-link {
+  font-size: 1.2rem;
+  font-weight:300;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px chocolate;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-left: 40px; /* Add this line */
+}
+
+nav ul li .nav-link:hover {
+  color: #14213D;
+  text-shadow: 1px 1px 1px #8b4800;
+}
+
+
+/* Main content */
+main {
+  min-height: calc(100vh - 200px);
+}
+
+
+/* Header */
+.header {
+  background-color: #000000;
+  text-align: center;
+  padding: 30px;
+  color: #FFFFFF;
+}
+
+.header-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  color: #FCA311;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #14213D;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.362);
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  color: #c66a00;
+  background-color: rgba(222, 221, 221, 0.185);
+  padding: 5px;
+  border: 1px solid #14213D;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #FCA311;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 20px;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.699);
+}
+
+button:hover {
+  background-color: #fa7d00;
+  color: #14213d;
+  text-shadow: 1px 1px 1px #ffd4a9;
+}
+
+/* Beer search input */
+.beer-search {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 100px ;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border: 1px solid #14213D;
+  border-radius: 3px;
+}
+
+/* Beer list */
+.beer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Beer item */
+.beer-item {
+  background-color: #FFFFFF;
+  border: 1px solid #14213D;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.beer-item:hover {
+  transform: translateY(-5px);
+}
+
+.beer-item img {
+  width:100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.beer-item h2,
+.beer-item h3 {
+  margin-top: 10px;
+}
+/* Single Beer Page */
+#single-beer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+  max-width: 600px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.362);
+  height: auto;
+}
+
+
+#single-beer-container img {
+  width: 300px;
+  height: auto;
+  border-radius: 3px;
+}
+
+#single-beer-container h1,
+#single-beer-container h2 {
+  margin-top: 10px;
+}
+
+/* Back link */
+.back-link {
+  color: #14213D;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #FCA311;
+}
+
+/* Cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px auto;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #14213D;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+/* Single Beer Page */
+.single-beer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.single-beer-container img {
+  width: 300px;
+  height: auto;
+}
+
+/* Footer */
+.footer {
+  background-image: url('https://www.shbarcelona.com/blog/en/wp-content/uploads/2016/02/First-beer-photo-e1455748858975-810x564.jpg');
+  background-size:cover;
+  background-position: center;
+  padding: 50px 0;
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: 15px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+}
+
+.footer-links a {
+  margin-left: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  filter: grayscale(0%);
   color: white;
+  text-decoration: none;
+  margin-left: 300px;
+  margin-right: -150px;
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-links a:hover {
+  filter: grayscale(0%);
+  color: #ff8800;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer p {
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 30px;
+  
 }
+
+
