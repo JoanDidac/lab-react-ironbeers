@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 
+
+
 const AllBeers = () => {
   const [beers, setBeers] = useState([]);
   const [filteredBeers, setFilteredBeers] = useState([]);
@@ -32,16 +34,16 @@ const AllBeers = () => {
       <input type="text" className="beer-search" placeholder="Search for a beer" onChange={handleSearch} /> {/* Add class here */}
       <div className="beer-list"> {/* Add class here */}
         {filteredBeers.map((beer) => (
-          <div key={beer._id} className="beer-item"> {/* Add class here */}
+           <div key={beer._id} className="beer-item"> {/* Add class here */}
             <Link to={`/beers/${beer._id}`}>
               <img src={beer.image_url} alt={beer.name} />
-              <div>
+               <div>
                 <h2>{beer.name}</h2>
                 <h3>{beer.tagline}</h3>
                 <p>Created by: {beer.contributed_by}</p>
-              </div>
+               </div>
             </Link>
-          </div>
+           </div>
         ))}
       </div>
     </div>

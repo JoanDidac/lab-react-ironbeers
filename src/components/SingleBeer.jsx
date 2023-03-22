@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 const SingleBeer = () => {
   const { beerId } = useParams();
@@ -33,11 +33,11 @@ const SingleBeer = () => {
         <div>
           <h1>{beer.name}</h1>
           <h2>{beer.tagline}</h2>
-          <p>First brewed: {beer.first_brewed}</p>
-          <p>Attenuation level: {beer.attenuation_level}</p>
-          <p>{beer.description}</p>
-          <p>Created by: {beer.contributed_by}</p>
-        </div>
+           <p>First brewed: {beer.first_brewed} </p>
+           <p>Attenuation level: {beer.attenuation_level} </p>
+           <p>{beer.description} </p>
+           <p>Created by: {beer.contributed_by} </p>
+          </div>
         <Link to="/beers" className="back-link">Back to All Beers</Link>
       </div>
     

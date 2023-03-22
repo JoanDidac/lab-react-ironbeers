@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
 
+
+
 const RandomBeer = () => {
   const [beer, setBeer] = useState(null);
 
@@ -24,20 +26,22 @@ const RandomBeer = () => {
   }
 
   return (
-    <div className="single-beer-container"> {/* Use the same class here */}
+    <div className="single-beer-container"> 
       <Header />
       <img src={beer.image_url} alt={beer.name} />
       <div>
-        <h1>{beer.name}</h1>
-        <h2>{beer.tagline}</h2>
-        <p>First brewed: {beer.first_brewed}</p>
-        <p>Attenuation level: {beer.attenuation_level}</p>
-        <p>{beer.description}</p>
-        <p>Created by: {beer.contributed_by}</p>
-      </div>
-      <Link to="/beers" className="back-link">Back to All Beers</Link> {/* Use the same class here */}
+         <h1>{beer.name}</h1>
+         <h2>{beer.tagline}</h2>
+            <p>First brewed: {beer.first_brewed}</p>
+            <p>Attenuation level: {beer.attenuation_level}</p>
+            <p>{beer.description}</p>
+            <p>Created by: {beer.contributed_by}</p>
+       </div>
+      <Link to="/beers" className="back-link">Back to All Beers</Link> 
     </div>
   );
 };
+
+
 
 export default RandomBeer;

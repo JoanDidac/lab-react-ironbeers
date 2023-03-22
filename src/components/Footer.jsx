@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-links">
-          <a id='footerLink' href="#">Contact</a>
+          <a id='footerLink' href="https://www.filmaffinity.com/es/film815526.html">Contact</a>
           <a id='footerLink' href="#">About</a>
         </div>
         <p>Created By U&D© | All Rights Reserved.</p>
