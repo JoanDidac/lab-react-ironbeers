@@ -419,4 +419,14 @@ button:hover {
   
 }
 
+/* LOADING / BEER-GIF */
+
+#beer-gif {
+  width: 20vw;
+  padding: 50px;
+  margin-left: 38vw;
+  margin-right: auto;
+  box-shadow: inset  40px 40px 100px rgba(255, 128, 0, 0.469);
+}
+
 
