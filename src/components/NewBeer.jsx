@@ -42,6 +42,7 @@ const NewBeer = () => {
     <div>
       <Header />
       <form onSubmit={handleSubmit}>
+      <h1 className='form-title'>Create your New Beer</h1>
         <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" value={formValues.name} onChange={handleChange} required />
 
