@@ -32,9 +32,9 @@ const AllBeers = () => {
     <div>
       <Header />
       <input type="text" className="beer-search" placeholder="Search for a beer" onChange={handleSearch} /> {/* Add class here */}
-      <div className="beer-list"> {/* Add class here */}
+      <div className="beer-list"> 
         {filteredBeers.map((beer) => (
-           <div key={beer._id} className="beer-item"> {/* Add class here */}
+           <div key={beer._id} className="beer-item"> 
             <Link to={`/beers/${beer._id}`}>
               <img src={beer.image_url} alt={beer.name} />
                <div>
